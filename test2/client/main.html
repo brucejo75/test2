@@ -1,26 +1,5 @@
-<head>
-  <title>test2</title>
-</head>
-
 <body>
-  {{> hello}}
-</body>
-
-<template name="hello">
-    {{#with myData}}
-        {{> myDataT}}
-    {{/with}}
-</template>
-
-<template name="myDataT">
-    <div>{{f0}}</div>
-    <div>{{f1}}</div>
-    {{#each others}}
-        {{> othersT}}
+    {{#each log_and_return_items}} 
+        {{ this }} 
     {{/each}}
-</template>
-
-<template name="othersT">
-    <div>{{f2}}</div>
-    <div>{{fa}}</div>
-</template>
+</body>

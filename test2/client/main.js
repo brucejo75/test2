@@ -1,15 +1,9 @@
-Template.hello.viewmodel({
-  myData: {
-    f0: '0',
-    others:[
-      {_id: 1, fa: 'a1'},
-      {_id: 2, fa: 'a2'}
-    ]
-  },
-});
-Template.myDataT.viewmodel({
-  f1: "1",
-});
-Template.othersT.viewmodel({
-  f2: "2",
+Template.body.viewmodel({
+  items: [1, 2],
+  log_and_return_items: function () {
+    console.log(this.items());
+    console.log("instanceof Array", this.items() instanceof Array);
+    console.log("isArray", _.isArray(this.items()));
+    return this.items();
+  }
 });
